@@ -1,0 +1,99 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background */
+  color: #ffffff;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #1f1f1f; /* Almost black */
+  padding: 15px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #00ffbf; /* Bright aqua */
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+
+.navbar ul li a:hover {
+  background-color: #333333; /* Darker gray */
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+/* Main Content Layout using Flexbox */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+/* Main content area */
+.main-content {
+  flex: 2;
+  background-color: #1e3d59; /* Deep blue */
+  color: #ffffff;
+  padding: 20px;
+  margin-right: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+/* Sidebar area */
+.sidebar {
+  flex: 1;
+  background-color: #ff6f61; /* Vibrant coral red */
+  color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .main-content, .sidebar {
+    padding: 15px;
+  }
+}
